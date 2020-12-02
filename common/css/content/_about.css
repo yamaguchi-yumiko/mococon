@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* ==============================================================
+*  aboutレイアウト
+* ============================================================ */
+.about-content {
+  text-align: center;
+  margin: 60px 0; }
+  .about-content .blog,
+  .about-content p {
+    text-align: left;
+    margin-top: 30px; }
+  .about-content h3 {
+    margin: 70px 0 20px; }
+
+.about-top-img {
+  background: url("../img/mococon_tag.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 110px;
+  text-align: left; }
+
+.about-profile-img img {
+  width: 60%; }
+
+.about h2 {
+  font-size: 20px;
+  margin: 80px 0 20px 0;
+  position: relative;
+  display: inline-block;
+  padding: 24px 64px; }
+  .about h2:after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 4px;
+    border-top: 1px solid #111;
+    position: absolute;
+    top: 0;
+    right: -24px; }
+  .about h2:before {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 4px;
+    border-top: 1px solid #111;
+    position: absolute;
+    top: 0;
+    left: -24px; }
+  .about h2 span {
+    display: block;
+    width: 4px;
+    height: 4px;
+    border: 2px solid #111;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    margin-left: -4px; }
+
+.blog a {
+  color: #f6af10;
+  border-bottom: 1px solid; }

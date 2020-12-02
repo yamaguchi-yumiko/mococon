@@ -1,0 +1,61 @@
+/* ==============================================================
+*  共通　レイアウト
+* ============================================================ */
+body {
+font-family: 'ヒラギノ角ゴシック','Hiragino Sans','ヒラギノ角ゴシック','Hiragino Sans',YuGothic,'Yu Gothic',sans-serif;
+}
+
+.navigation{
+  margin-top: 10px;
+}
+
+section:not(:first-child) {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.category,.about,.gallery,.news-top{
+  h1{
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  color: $color-bule;
+  margin-bottom: 10px;
+  }
+}
+
+.category {
+  h2{
+  font-size: 16px;
+  font-weight:normal;
+    }
+}
+
+.home-top{
+  h2{
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  color: $color-bule;
+  margin-top: 10px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: $color-bule;
+    border-radius: 2px;
+  }
+  }
+}
+
+a,
+span {
+  cursor: pointer;
+}

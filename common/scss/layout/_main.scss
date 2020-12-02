@@ -1,0 +1,401 @@
+/* ==============================================================
+*  mainレイアウト
+* ============================================================ */
+/* 画面外にいる状態 */
+.fadein {
+  opacity: 0.1;
+  transform: translate(0, 45px);
+  transition: all 1000ms;
+}
+/* 画面内に入った状態 */
+.fadein.scrollin {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+/*header-image*/
+.top {
+  background: url(../img/IMG_7410.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 330px;
+
+  h1 {
+    font-size: 30px;
+    padding-top: 120px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+
+  p {
+    color: #fff;
+    font-size: 14px;
+    padding-top: 10px;
+    line-height: normal;
+  }
+}
+
+.home {
+  main {
+    text-align: center;
+  }
+
+  h3 {
+    font-weight: inherit;
+    font-size: 15px;
+  }
+}
+
+/* pickup */
+.slider {
+  margin: 30px auto;
+  width: 80%;
+  height: auto;
+
+  img {
+    height: auto;
+    width: 95%;
+    margin: 8px;
+  }
+}
+
+/*about*/
+.about-brand {
+  width: 100%;
+  height: auto;
+}
+
+.about-top {
+  margin-top: 40px;
+
+  img {
+    width: 80%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  p {
+    padding: 10px;
+  }
+}
+
+.about-history {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  p:nth-child(1) {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    font-size: 13px;
+    width: 140px;
+    display: inline-block;
+    padding-top: 3px;
+    background: $color-gray;
+    margin-top: 30px;
+    transition: 0.3s ease 0s;
+    position: relative;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    span {
+      display: inline-block;
+      color: $color-text;
+      margin-right: 10px;
+
+      &:before {
+        content: "";
+        margin-top: auto;
+        margin-bottom: auto;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 120px;
+        bottom: 3px;
+        border-right: 2px solid $color-text;
+        border-bottom: 2px solid $color-text;
+        width: 7px;
+        height: 7px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+/*item-category*/
+
+.item-category-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px 0 0 auto;
+}
+
+.item-category-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px 0 0 auto;
+}
+
+.item-content-moer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px 0 0 auto;
+}
+
+.item-box {
+  width: 50%;
+  height: auto;
+  margin-bottom: 40px;
+
+  img {
+    width: 80%;
+  }
+
+  p {
+    &:nth-child(4) {
+      color: red;
+      font-size: 12px;
+    }
+  }
+}
+
+/* items*/
+.grad-wrap {
+  position: relative;
+  margin-top: -30px;
+}
+
+.grad-wrap + .grad-wrap {
+  margin-top: 40px;
+}
+
+#grad-trigger {
+  font-size: 16px;
+  width: 300px;
+  height: 50px;
+  display: inline-block;
+  padding-top: 15px;
+  background: $color-gray;
+  color: $color-text;
+  margin-top: 20px;
+  transition: 0.3s ease 0s;
+  margin-right: 10px;
+  position: relative;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:before {
+    content: "";
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 270px;
+    bottom: 0px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+  }
+}
+
+.grad-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.grad-item.is-hide {
+  height: 0;
+  /*隠した後の高さ*/
+}
+
+#grad-trigger.is-show + .grad-item::before {
+  display: none;
+}
+
+/* news */
+.news-wrap {
+  margin: 50px 0;
+
+  p:nth-child(2) {
+    padding-top: 10px;
+  }
+
+  time {
+    font-weight: bold;
+  }
+
+  img {
+    max-width: 70%;
+    margin-top: 20px;
+  }
+}
+
+.arrow {
+  margin-top: 44px;
+  position: relative;
+  display: inline-block;
+  padding-left: 10px;
+  text-align: right;
+  color: $color;
+  transition: 0.3s ease 0s;
+  font-size: 20px;
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 0;
+    border-top: solid 2px $color;
+    border-right: solid 2px $color;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 60%;
+    left: 0;
+    margin-top: -4px;
+    transition: 0.3s ease 0s;
+  }
+
+  &:hover {
+    color: rgb(246, 175, 16);
+
+    &::before {
+      border-top: solid 2px rgb(246, 175, 16);
+      border-right: solid 2px rgb(246, 175, 16);
+    }
+  }
+}
+/* contact */
+.contact-content {
+  width: 100%;
+  background-color: #eeeeee;
+  margin-top: 50px;
+
+  img {
+    width: 30%;
+    height: auto;
+  }
+}
+
+.contact-img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 10px;
+}
+
+.contact-button {
+  .button1 {
+    font-size: 16px;
+    width: 140px;
+    height: 40px;
+    display: inline-block;
+    padding-top: 7px;
+    background: $color-light;
+    margin-top: 30px;
+    transition: 0.3s ease 0s;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 30px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    a {
+      color: $color-text;
+    }
+  }
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+
+  &:hover img {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}
+
+figure img {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/* news*/
+.news-top h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  padding: 24px 64px;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 4px;
+    border-top: 1px solid #111;
+    position: absolute;
+    top: 0;
+    right: -24px;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 4px;
+    border-top: 1px solid #111;
+    position: absolute;
+    top: 0;
+    left: -24px;
+  }
+
+  span {
+    display: block;
+    width: 4px;
+    height: 4px;
+    border: 2px solid #111;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    margin-left: -4px;
+  }
+}
+
+.news-archives {
+  margin: 80px 0 80px 0;
+}
+
+.tim-container {
+  text-align: left;
+  p {
+    &:nth-child(2n + 2) {
+      margin-bottom: 30px;
+    }
+
+    &:nth-child(2n + 1) {
+      border-bottom: 1px solid;
+      display: inline-block;
+    }
+  }
+}

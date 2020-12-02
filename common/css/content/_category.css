@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* ==============================================================
+*  categoryレイアウト
+* ============================================================ */
+.tie-content, .Original-Mascot-content, .Other-content, .Bag-content, .news-content {
+  margin-top: 160px;
+  text-align: center; }
